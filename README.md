@@ -1,6 +1,10 @@
 # Gallery App
 
-A modern, responsive image gallery built with **React**. The project focuses on creating a clean gallery experience while practicing React fundamentals such as component-based architecture, state management, API fetching, routing, reusable components, and responsive UI design.
+A modern, responsive image gallery built with **React**.
+
+🌐 **[Live Demo](https://gallery-app-two-iota.vercel.app/)**
+
+The project focuses on creating a clean gallery experience while practicing React fundamentals such as component-based architecture, state management, API fetching, routing, reusable components, and responsive UI design.
 
 ## ✨ Features
 
