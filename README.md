@@ -80,11 +80,9 @@ The project is still being developed. Planned improvements include:
 
 * [ ] Implement functional image search.
 * [ ] Implement the Saved Images feature.
-* [ ] Add image details when an image is selected.
 * [ ] Improve mobile navigation.
 * [ ] Add better loading states.
 * [ ] Add error handling for failed API requests.
-* [ ] Improve gallery responsiveness.
 * [ ] Add animations and subtle UI interactions.
 * [ ] Improve accessibility.
 * [ ] Add a more complete About page.
