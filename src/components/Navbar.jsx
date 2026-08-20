@@ -7,13 +7,13 @@ export default function Navbar({ darkMode, setDarkMode }) {
   const NavList = () => {
     return (
       <>
-        <Link className="font-light text-2xl" to="/">
+        <Link className="font-light text-2xl dark:text-zinc-800" to="/">
           Home
         </Link>
-        <Link className="font-light text-2xl" to="/gallery">
+        <Link className="font-light text-2xl dark:text-zinc-800" to="/gallery">
           Gallery
         </Link>
-        <Link className="font-light text-2xl" to="/about">
+        <Link className="font-light text-2xl dark:text-zinc-800" to="/about">
           About
         </Link>
       </>
@@ -64,22 +64,28 @@ export default function Navbar({ darkMode, setDarkMode }) {
           <NavList />
         </div>
 
-        <div className="gap-4 justify-items-center hidden md:flex">
+        <div className=" gap-4 justify-center items-center hidden md:flex ">
+          <SetThemeButton />
+
           <Profile />
         </div>
-
-        <button onClick={toggleNavbar} className="md:hidden">
-          {isOpen ? (
-            <i className="ri-close-line text-white dark:bg-zinc-100 dark:text-zinc-600 text-2xl"></i>
-          ) : (
-            <i className="ri-menu-fill text-white dark:bg-zinc-100 dark:text-zinc-600 text-2xl"></i>
-          )}
-        </button>
+        <div className="flex gap-3 justify-center items-center md:hidden">
+          
+            <SetThemeButton />
+       
+          <button onClick={toggleNavbar}>
+            {isOpen ? (
+              <i className="ri-close-line text-white dark:bg-zinc-100 dark:text-zinc-900 text-2xl"></i>
+            ) : (
+              <i className="ri-menu-fill text-white dark:bg-zinc-100 dark:text-zinc-900 text-2xl"></i>
+            )}
+          </button>
+        </div>
 
         <div
           className={`md:hidden py-4 bg-zinc-900 border border-zinc-800 dark:bg-zinc-100 dark:border-zinc-300 dark:text-zinc-600 absolute left-0 top-full w-full  flex flex-col items-center gap-5 z-50 transition-all duration-300 overflow-hidden ${isOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0 "}`}
         >
-          <Link className="font-light text-2xl" to="/">
+          <Link className="font-light text-2xl dark:text-zinc-800" to="/">
             Profile
           </Link>
           <NavList />

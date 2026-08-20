@@ -7,11 +7,10 @@ import Navbar from "./components/Navbar";
 import { useEffect, useState } from "react";
 
 export default function App() {
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     document.documentElement.classList.toggle("dark", darkMode);
-    console.log(document.documentElement.classList);
   }, [darkMode]);
 
   return (
