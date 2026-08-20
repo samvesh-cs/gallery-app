@@ -4,7 +4,7 @@ A modern, responsive image gallery built with **React**.
 
 🌐 **[Live Demo](https://gallery-app-two-iota.vercel.app/)**
 
-The project focuses on creating a clean gallery experience while practicing React fundamentals such as component-based architecture, state management, API fetching, routing, reusable components, and responsive UI design.
+The project focuses on creating a clean gallery experience while practicing React fundamentals such as component-based architecture, state management, API fetching, routing, reusable components, responsive UI design, and theme switching.
 
 ## ✨ Features
 
@@ -12,14 +12,15 @@ The project focuses on creating a clean gallery experience while practicing Reac
 * 🖼️ **Gallery Page** — Displays images fetched from the Picsum Photos API.
 * 📄 **Pagination** — Navigate through different pages of gallery images.
 * ℹ️ **About Page** — Explains the purpose and vision of the gallery.
-* 📱 **Responsive Layout** — Uses Tailwind CSS for responsive layouts.
+* 📱 **Responsive Layout** — Uses Tailwind CSS for responsive layouts across different screen sizes.
+* 🌙 **Dark / Light Mode** — Switch between dark and light themes for a personalized viewing experience.
 * 🧩 **Reusable Components** — Images and information cards are rendered using reusable React components.
 
 ## 🛠️ Tech Stack
 
 * **React** — Building the user interface with reusable components.
 * **React Router** — Handling navigation between Home, Gallery, and About pages.
-* **Tailwind CSS** — Styling and responsive layouts.
+* **Tailwind CSS** — Styling, responsive layouts, and dark/light theme support.
 * **Lucide React** — Providing UI icons.
 * **JavaScript** — Application logic and data handling.
 * **Picsum Photos API** — Providing images for the gallery.
@@ -28,6 +29,7 @@ The project focuses on creating a clean gallery experience while practicing Reac
 
 ```text
 src/
+
 │
 ├── assets/
 │   ├── Logo.png
@@ -78,19 +80,6 @@ npm run dev
 
 Open the local development URL shown in your terminal.
 
-## 🔮 Future Improvements
-
-The project is still being developed. Planned improvements include:
-
-* [ ] Implement functional image search.
-* [ ] Implement the Saved Images feature.
-* [ ] Improve mobile navigation.
-* [ ] Add better loading states.
-* [ ] Add error handling for failed API requests.
-* [ ] Add animations and subtle UI interactions.
-* [ ] Improve accessibility.
-* [ ] Add a more complete About page.
-* [ ] Add proper image keys and optimize image loading.
 
 ## 🎯 Purpose
 
@@ -98,6 +87,4 @@ This project is part of my journey of learning and improving my frontend develop
 
 Rather than focusing only on following tutorials, I built this project to practice applying React concepts together in a single application.
 
-The main goal was to understand how **components, routing, state, APIs, and reusable data-driven UI** work together in a real project.
-
-
+The main goal was to understand how **components, routing, state, APIs, responsive design, and theme switching** work together in a real project.

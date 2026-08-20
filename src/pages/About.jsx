@@ -14,13 +14,13 @@ export default function About() {
   });
 
   return (
-    <div className="bg-black text-white min-h-screen">
+    <div className="bg-black text-white min-h-screen dark:bg-zinc-100 dark:text-zinc-700">
       <section className="text-center pt-20 pb-22">
         <h1 className="text-5xl font-bold  ">About Gallery</h1>
-        <h3 className="text-xl tracking-tighter text-gray-500 mt-2">
+        <h3 className="text-xl tracking-tighter text-gray-500 dark:text-zinc-600  mt-2">
           Discover. Explore. Experience.
         </h3>
-        <h3 className="text-lg  tracking-tighter text-gray-500 mt-4 ">
+        <h3 className="text-lg  tracking-tighter text-gray-500 dark:text-zinc-600 mt-4 ">
           A place to discover, explore, and appreciate beautiful photography
           from around the world.
         </h3>

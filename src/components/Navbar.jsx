@@ -1,51 +1,90 @@
+import { useState } from "react";
 import logo from "../assets/Logo.png";
 import profile from "../assets/profile.png";
 import { Link } from "react-router-dom";
 
-export default function Navbar() {
-  return (
-    <div className="relative flex justify-between items-center px-6 py-4 h-[10vh] bg-black text-white">
-      <div className="flex gap-7 items-center">
-        <div className="h-10 w-10 rounded-full overflow-hidden">
-          <img
-            src={logo}
-            alt="logo"
-            className="h-full w-full rounded-full scale-200 object-cover"
-          />
-        </div>
-        <Link className="font-light text-xl" to="/">
+export default function Navbar({ darkMode, setDarkMode }) {
+  const NavList = () => {
+    return (
+      <>
+        <Link className="font-light text-2xl" to="/">
           Home
         </Link>
-        <Link className="font-light text-xl" to="/gallery">
+        <Link className="font-light text-2xl" to="/gallery">
           Gallery
         </Link>
-        <Link className="font-light text-xl" to="/about">
+        <Link className="font-light text-2xl" to="/about">
           About
         </Link>
+      </>
+    );
+  };
+  const SetThemeButton = () => {
+    return (
+      <button
+        className="outline-none"
+        onClick={() => {
+          setDarkMode(!darkMode);
+        }}
+      >
+        {darkMode ? (
+          <i className="text-2xl ri-moon-fill"></i>
+        ) : (
+          <i className="text-2xl ri-sun-fill"></i>
+        )}
+      </button>
+    );
+  };
+  const Profile = () => {
+    return (
+      <div className="h-10 w-10 rounded-full ">
+        <img
+          src={profile}
+          alt="profile"
+          className="h-full w-full rounded-full object-cover"
+        />
       </div>
-      <div className="absolute left-1/2 -translate-x-1/2">
-        <form>
-          <div className="py-2 px-3 rounded-full w-90 flex align-center bg-zinc-800">
-            <i className="ri-search-line text-gray-600 text-xl"></i>
-            <input
-              type="text"
-              placeholder="Search"
-              className="outline-none pl-2 tracking-tighter"
-            />
-          </div>
-        </form>
-      </div>
-      <div className="flex gap-4 items-center">
-        <h1 className="bg-white text-black font-bold py-1 text-xm px-3 rounded-full tracking-tighter">Saved</h1>
+    );
+  };
 
-        <div className="h-10 w-10 rounded-full ">
-          <img
-            src={profile}
-            alt="profile"
-            className="h-full w-full rounded-full object-cover"
-          />
+  const [isOpen, setIsOpen] = useState(false);
+
+  function toggleNavbar() {
+    setIsOpen(!isOpen);
+  }
+
+  return (
+    <>
+      <nav className="relative flex justify-between items-center px-6 py-4 h-[10vh] bg-black text-white dark:bg-white dark:text-zinc-900">
+        <div className="flex gap-7 items-center">
+          <h1 className="font-medium text-2xl">PhotoGallery</h1>
         </div>
-      </div>
-    </div>
+
+        <div className="absolute left-1/2 -translate-x-1/2 md:flex gap-20 hidden">
+          <NavList />
+        </div>
+
+        <div className="gap-4 justify-items-center hidden md:flex">
+          <Profile />
+        </div>
+
+        <button onClick={toggleNavbar} className="md:hidden">
+          {isOpen ? (
+            <i className="ri-close-line text-white dark:bg-zinc-100 dark:text-zinc-600 text-2xl"></i>
+          ) : (
+            <i className="ri-menu-fill text-white dark:bg-zinc-100 dark:text-zinc-600 text-2xl"></i>
+          )}
+        </button>
+
+        <div
+          className={`md:hidden py-4 bg-zinc-900 border border-zinc-800 dark:bg-zinc-100 dark:border-zinc-300 dark:text-zinc-600 absolute left-0 top-full w-full  flex flex-col items-center gap-5 z-50 transition-all duration-300 overflow-hidden ${isOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0 "}`}
+        >
+          <Link className="font-light text-2xl" to="/">
+            Profile
+          </Link>
+          <NavList />
+        </div>
+      </nav>
+    </>
   );
 }

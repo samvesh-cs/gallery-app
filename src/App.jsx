@@ -4,11 +4,19 @@ import Home from "./pages/Home";
 import Gallery from "./pages/Gallery";
 import About from "./pages/About";
 import Navbar from "./components/Navbar";
+import { useEffect, useState } from "react";
 
 export default function App() {
+  const [darkMode, setDarkMode] = useState(true);
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", darkMode);
+    console.log(document.documentElement.classList);
+  }, [darkMode]);
+
   return (
     <>
-      <Navbar />
+      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/gallery" element={<Gallery />} />
