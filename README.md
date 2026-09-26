@@ -8,13 +8,13 @@ The project focuses on creating a clean gallery experience while practicing Reac
 
 ## ✨ Features
 
-* 🏠 **Home Page** — Introduction to the gallery with featured images.
-* 🖼️ **Gallery Page** — Displays images fetched from the Picsum Photos API.
-* 📄 **Pagination** — Navigate through different pages of gallery images.
-* ℹ️ **About Page** — Explains the purpose and vision of the gallery.
-* 📱 **Responsive Layout** — Uses Tailwind CSS for responsive layouts across different screen sizes.
-* 🌙 **Dark / Light Mode** — Switch between dark and light themes for a personalized viewing experience.
-* 🧩 **Reusable Components** — Images and information cards are rendered using reusable React components.
+* **Home Page** — Introduction to the gallery with featured images.
+* **Gallery Page** — Displays images fetched from the Picsum Photos API.
+* **Pagination** — Navigate through different pages of gallery images.
+* **About Page** — Explains the purpose and vision of the gallery.
+* **Responsive Layout** — Uses Tailwind CSS for responsive layouts across different screen sizes.
+* **Dark / Light Mode** — Switch between dark and light themes for a personalized viewing experience.
+* **Reusable Components** — Images and information cards are rendered using reusable React components.
 
 ## 🛠️ Tech Stack
 
